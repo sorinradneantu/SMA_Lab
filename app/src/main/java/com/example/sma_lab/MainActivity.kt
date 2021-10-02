@@ -2,6 +2,8 @@ package com.example.sma_lab
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,4 +12,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun setDefaultText(view: View){
+
+        val defaultText = DefaultTextHolder();
+
+        val textView = findViewById<TextView>(R.id.helloWorldTW);
+        textView.apply {
+            text = defaultText.text;
+        }
+
+    }
 }
