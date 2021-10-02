@@ -22,4 +22,18 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    fun setNewText(view: View){
+
+        val plainText = findViewById<TextView>(R.id.newTextInput);
+        val newText = plainText.text.toString();
+
+        val textView = findViewById<TextView>(R.id.helloWorldTW);
+        textView.apply {
+            text = newText;
+        }
+
+    }
+
+
 }
